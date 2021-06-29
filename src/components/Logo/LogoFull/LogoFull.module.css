@@ -1,0 +1,22 @@
+svg {
+	width: 30vw;
+	height: 13vh;
+}
+
+.path {
+	stroke-dasharray: 245.24049377441406;
+	stroke-dashoffset: 247.24049377441406;
+	fill: transparent;
+	stroke-width: 0.8;
+	stroke: #BA181B;
+	animation: draw 3s linear alternate forwards;
+}
+
+@keyframes draw {
+	0% {
+		stroke-dashoffset: 247.34049377441406;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}

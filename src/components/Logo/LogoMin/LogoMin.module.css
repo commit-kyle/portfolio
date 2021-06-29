@@ -1,0 +1,34 @@
+.Container {
+	position: fixed;
+}
+
+.SVG {
+	max-width: 6rem;
+	height: auto;
+}
+
+.Path {
+	stroke-dasharray: 250;
+	stroke-dashoffset: 250;
+	fill: transparent;
+	stroke-width: 0.5;
+	stroke: #BA181B;
+	animation: draw 1.5s linear alternate forwards;
+}
+
+@keyframes draw {
+	0% {
+		stroke-dashoffset: 250;
+		stroke-width: 0.5;
+	}
+	80% {
+		stroke-width: 0.3;
+	}
+	90% {
+		fill: transparent;
+	}
+	100% {
+		stroke-dashoffset: 0;
+		fill: #BA181B;
+	}
+}

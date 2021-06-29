@@ -1,0 +1,30 @@
+.Container {
+	/* position: relative;
+	top: 150px;
+	left: 0; */
+	max-width: 100vw;
+	height: 100vh;
+	scroll-snap-align: center;
+	background-image: linear-gradient(rgb(233, 231, 231), #ECE9EB);
+}
+
+.HeaderContent {
+	margin-left: 27rem;
+	padding-top: 6rem;
+	color: #14213d;
+}
+
+.Title {
+	font-size: 3rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-bottom: 3rem;
+}
+
+.Desc {
+	font-size: 2rem;
+	font-weight: 200;
+	letter-spacing: 1.5px;
+	width: 55rem;
+}

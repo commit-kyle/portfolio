@@ -1,0 +1,57 @@
+
+.Main {
+  width: 13rem;
+  max-width: 13rem;
+  position: fixed;
+  left: -9.9rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 60%;
+  height: 3.0rem;
+  background-color: #F5F5F4;
+  display: flex;
+  transition: .5s all;
+  z-index: 1000;
+}
+
+.Container {
+  width: 100%;
+  height: auto;
+  border-bottom-right-radius: 3px;
+  background-color: #F5F5F4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.SocialImageContainer {
+  width: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: .5rem;
+  margin-left: 1rem;
+}
+
+.SocialImage {
+  min-width: 100%;
+}
+
+.SocialBrandName {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.SocialBrandName a {
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  padding-left: 3rem;
+}
+
+.Main:hover {
+  left: 0;
+  width: 10rem;
+  border-top-right-radius: 60%;
+  border-bottom-right-radius: 0;
+}
