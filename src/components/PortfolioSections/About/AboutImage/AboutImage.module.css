@@ -9,7 +9,7 @@
 	--blend-color-1: transparent;
 	--blend-color-2: transparent;
 	--blend-color-3: #a4161a;
-	--blend-color-4: yellow;
+	--blend-color-4: blue;
 	--blend-color-5: #14213d;
 
 	--blend-mode-1: none;
@@ -54,23 +54,23 @@
 }
 
 .ImageGlitch:nth-child(2) {
-	background-color: var(--blend-color-2);
+	background-color: var(--blend-color-1);
 	background-blend-mode: var(--blend-mode-2);
 }
 
 .ImageGlitch:nth-child(3) {
-  background-color: var(--blend-color-3);
+  background-color: var(--blend-color-1);
 	background-blend-mode: var(--blend-mode-3);
 }
 
 .ImageGlitch:nth-child(4) {
-	background-color: var(--blend-color-4);
+	background-color: var(--blend-color-5);
 	background-blend-mode: var(--blend-mode-4);
 }
 
 .ImageGlitch:nth-child(5) {
-	background-color: var(--blend-color-5);
-	background-blend-mode: var(--blend-mode-5);
+	background-color: var(--blend-color-3);
+	background-blend-mode: var(--blend-mode-2);
 }
 
 /* all layers except the first one are hidden by default*/
@@ -92,7 +92,7 @@
 .ImageContainer:hover > .ImageGlitch:nth-child(3) {
 	transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0);
 	animation: glitch-anim-2-horizontal var(--time-anim) infinite linear alternate;
-}
+} 
 
 .ImageContainer:hover > .ImageGlitch:nth-child(4) {
 	transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1,-1,1);
@@ -112,23 +112,23 @@
 	10% {
 		-webkit-clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
 		clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
-	}
+		}
 	20% {
 		-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
 		clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
-	}
+		}
 	30% {
 		-webkit-clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
 		clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
-	}
+		}
 	40% {
 		-webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
 		clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-	}
+		}
 	50% {
 		-webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
 		clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-	}
+		}
 	60% {
 		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
 		clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
@@ -136,19 +136,19 @@
 	70% {
 		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
 		clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-	}
+		}
 	80% {
 		-webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
 		clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-	}
+		}
 	90% {
 		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
 		clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-	}
+		}
 	100% {
 		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
 		clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-	}
+		}
 }
 
 @keyframes glitch-anim-2-horizontal {
