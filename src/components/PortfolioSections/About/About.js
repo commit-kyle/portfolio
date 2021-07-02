@@ -33,30 +33,30 @@ const About = props => {
 		<section id="About" className={classes.Child}>
 			<div className={classes.Container}>
 				<div className={classes.HeaderContainer}>
-					<div className={classes.Header}>
-						<h2 className={classes.Heading}>A little about me</h2>
-					</div>
-					<AboutImage/>
+					<h2 className={classes.Heading}>A little about me</h2>
+					<AboutImage />
 				</div>
-				<div className={classes.Parent}>
-					<Info
-						number={'1'}
-						header={aboutData.first.header}
-						subHeader={aboutData.first.subHeader}
-						text={aboutData.first.text}
-					/>
-					<Info
-						number={'2'}
-						header={aboutData.first.header}
-						subHeader={aboutData.first.subHeader}
-						text={aboutData.first.text}
-					/>
-					<Info
-						number={'3'}
-						header={aboutData.first.header}
-						subHeader={aboutData.first.subHeader}
-						text={aboutData.first.text}
-					/>
+				<div className={classes.InfoContainer}>
+					<div className={classes.Parent}>
+						<Info
+							number={'1'}
+							header={aboutData.first.header}
+							subHeader={aboutData.first.subHeader}
+							text={aboutData.first.text}
+						/>
+						<Info
+							number={'2'}
+							header={aboutData.first.header}
+							subHeader={aboutData.first.subHeader}
+							text={aboutData.first.text}
+						/>
+						<Info
+							number={'3'}
+							header={aboutData.first.header}
+							subHeader={aboutData.first.subHeader}
+							text={aboutData.first.text}
+						/>
+					</div>
 				</div>
 			</div>
 		</section>

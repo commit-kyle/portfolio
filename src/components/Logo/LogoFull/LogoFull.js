@@ -4,7 +4,7 @@ import classes from './LogoFull.module.css';
 
 const LogoFull = props => {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 65">
+		<svg className={classes.logoFull} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 65">
 			<path
 				className={classes.path}
 				

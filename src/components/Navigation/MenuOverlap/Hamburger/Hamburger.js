@@ -13,7 +13,6 @@ const Hamburger = props => {
 	return (
 		<button
 			className={menuClasses.join(' ')}
-			style={props.position}
 			onClick={props.showMenu}
 			aria-label="Main Menu"
 		>

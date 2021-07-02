@@ -1,9 +1,55 @@
+@media screen and (max-width: 480px) {
+	div.Child {
+		margin-left: -2rem;
+	}
+	
+	span.Progress {
+		min-height: 15rem;
+		margin-right: 1rem;
+	}
+
+	span.ProgressNumber {
+		display: none;
+	}
+
+	div.Content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 15rem;
+		text-align: justify;
+		margin-top: -3rem;
+	}
+
+	h2.Header {
+		align-self: flex-start;
+		font-size: 14px;
+		letter-spacing: 1.5px;
+	}
+
+	h3.SubHeader {
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+
+	p.Text {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 992px) {
+	div.Content {
+		margin-bottom: 4rem;
+	}
+}
+
 .Child {
 	width: 100%;
 	min-height: 100%;
 	padding: 1rem;
 	scroll-snap-align: start;
 	display: flex;
+	margin-bottom: 1rem;
 }
 
 .Progress {
@@ -35,7 +81,7 @@
 .Content {
 	display: flex;
 	flex-direction: column;
-	width: 20rem;
+	max-width: 20rem;
 	max-height: 40rem;
 }
 
@@ -50,20 +96,10 @@
 	font-weight: 700;
 	font-size: 30px;
 	letter-spacing: -0.8px;
-	/* animation: move 1.5s; */
 }
 
 .Text {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 1.5rem;
-}
-
-@keyframes move {
-	from {
-		margin-top: 3rem;
-	}
-	to {
-		margin-top: 0;
-	}
 }

@@ -9,9 +9,9 @@ const Header = props => {
 	return (
 		<Aux>
 			<main id="Home" className={classes.Container}>
-			<Navigation showMenu={props.showMenu} menuActive={props.menuActive} />
+				<Navigation showMenu={props.showMenu} menuActive={props.menuActive} />
 				<div className={classes.HeaderContent}>
-					<p className={classes.Title}>Front End Developer</p>
+					<h2 className={classes.Title}>Front End Developer</h2>
 					<p className={classes.Desc}>
 						Making the web a better place, one expression at a time
 					</p>

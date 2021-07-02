@@ -10,14 +10,14 @@ import Hamburger from '../Navigation/MenuOverlap/Hamburger/Hamburger';
 const Navigation = props => {
 	return (
 		<Aux>
-			<LogoMin position={{ left: '4rem', top: '1.7rem' }} />
 			<nav className={classes.Nav}>
+				<div className={classes.LogoMin}>
+					<LogoMin />
+				</div>
 				<LogoFull />
-				<Hamburger
-					showMenu={props.showMenu}
-					menuActive={props.menuActive}
-					position={{ right: '5rem' }}
-				/>
+				<div className={classes.MenuIcon}>
+					<Hamburger showMenu={props.showMenu} menuActive={props.menuActive} />
+				</div>
 			</nav>
 		</Aux>
 	);

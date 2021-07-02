@@ -1,8 +1,21 @@
-.Container {
-	position: fixed;
+@media screen and (max-width: 480px) {
+	div.Container {
+		width: 4rem;
+	}
 }
 
-.SVG {
+@media screen and (min-width: 480px) and (max-width: 992px) {
+	div.Container {
+		width: 4rem;
+	}
+}
+
+.Container {
+	width: 6rem;
+}
+
+svg.SVG {
+	z-index: 9999 !important;
 	max-width: 6rem;
 	height: auto;
 }
@@ -12,7 +25,7 @@
 	stroke-dashoffset: 250;
 	fill: transparent;
 	stroke-width: 0.5;
-	stroke: #BA181B;
+	stroke: #ba181b;
 	animation: draw 1.5s linear alternate forwards;
 }
 
@@ -29,6 +42,6 @@
 	}
 	100% {
 		stroke-dashoffset: 0;
-		fill: #BA181B;
+		fill: #ba181b;
 	}
 }

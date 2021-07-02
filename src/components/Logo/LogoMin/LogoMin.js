@@ -4,7 +4,7 @@ import classes from './LogoMin.module.css';
 
 const LogoMin = props => {
 	return (
-		<div className={classes.Container} style={props.position}>
+		<div className={classes.Container}>
 			<a href="#Home" onClick={props.sectionLink}>
 				<svg
 					className={classes.SVG}

@@ -11,7 +11,7 @@ const Info = props => {
 			</span>
 			<div className={classes.Content}>
 				<h2 id="header" className={classes.Header}>{props.header}</h2>
-				<p id="subHeader" className={classes.SubHeader}>{props.subHeader}</p>
+				<h3 id="subHeader" className={classes.SubHeader}>{props.subHeader}</h3>
 				<p id="text" className={classes.Text}>{props.text}</p>
 			</div>
 		</div>
