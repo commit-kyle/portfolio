@@ -2,11 +2,35 @@
 	nav.Nav {
 		height: 100px;
 	}
+
+	div.LogoMin {
+		position: absolute;
+		top: 18px;
+		left: 20px;
+	}
+
+	div.MenuIcon {
+		position: absolute;
+		top: 25px;
+		right: 20px;
+	}
 }
 
 @media screen and (min-width: 480px) and (max-width: 992px) {
 	nav.Nav {
 		height: 100px;
+	}
+
+	div.LogoMin {
+		position: absolute;
+		top: 18px;
+		left: 20px;
+	}
+
+	div.MenuIcon {
+		position: absolute;
+		top: 25px;
+		right: 20px;
 	}
 }
 
@@ -19,14 +43,14 @@
 	background-color: #14213d;
 }
 
-div.LogoMin {
+.LogoMin {
 	position: absolute;
-	top: 18px;
-	left: 20px;
+	top: 24px;
+	left: 25px;
 }
 
-div.MenuIcon {
+.MenuIcon {
 	position: absolute;
-	top: 25px;
-	right: 20px;
+	top: 50px;
+	right: 40px;
 }

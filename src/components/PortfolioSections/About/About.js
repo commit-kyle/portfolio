@@ -31,7 +31,7 @@ const About = props => {
 
 	return (
 		<section id="About" className={classes.Child}>
-			<div className={classes.Container}>
+			<div className={classes.AboutContainer}>
 				<div className={classes.HeaderContainer}>
 					<h2 className={classes.Heading}>A little about me</h2>
 					<AboutImage />

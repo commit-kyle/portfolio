@@ -39,7 +39,7 @@
 .ImageContainer {
 	position: relative;
 	width: 100vw;
-	height: 100vh;
+	height: 60vh;
 	max-width: 400px;
 	max-height: calc(400px * 1.25);
 	overflow: hidden;

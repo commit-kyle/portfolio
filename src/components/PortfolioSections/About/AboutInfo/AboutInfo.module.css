@@ -2,7 +2,7 @@
 	div.Child {
 		margin-left: -2rem;
 	}
-	
+
 	span.Progress {
 		min-height: 15rem;
 		margin-right: 1rem;
@@ -13,16 +13,12 @@
 	}
 
 	div.Content {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		max-width: 15rem;
-		text-align: justify;
-		margin-top: -3rem;
+		justify-content: space-evenly;
+		max-width: 18rem;
+		max-height: 40rem;
 	}
 
 	h2.Header {
-		align-self: flex-start;
 		font-size: 14px;
 		letter-spacing: 1.5px;
 	}
@@ -37,29 +33,22 @@
 	}
 }
 
-@media screen and (min-width: 480px) and (max-width: 992px) {
-	div.Content {
-		margin-bottom: 4rem;
-	}
-}
-
 .Child {
 	width: 100%;
 	min-height: 100%;
-	padding: 1rem;
 	scroll-snap-align: start;
+	scroll-snap-stop: always;
 	display: flex;
-	margin-bottom: 1rem;
+	justify-content: space-evenly;
 }
 
 .Progress {
 	position: relative;
 	display: block;
 	width: 3px;
-	min-height: 36rem;
+	min-height: 100%;
+	max-height: 24rem;
 	background-color: #ba181b;
-	margin-right: 4rem;
-	margin-left: 1rem;
 }
 
 .ProgressNumber {
@@ -67,7 +56,7 @@
 	height: 1rem;
 	position: absolute;
 	top: 3.5rem;
-	left: -0.6rem;
+	left: -0.4rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -81,8 +70,10 @@
 .Content {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 	max-width: 20rem;
 	max-height: 40rem;
+	text-align: justify;
 }
 
 .Header {

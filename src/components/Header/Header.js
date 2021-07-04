@@ -10,12 +10,14 @@ const Header = props => {
 		<Aux>
 			<main id="Home" className={classes.Container}>
 				<Navigation showMenu={props.showMenu} menuActive={props.menuActive} />
-				<div className={classes.HeaderContent}>
-					<h2 className={classes.Title}>Front End Developer</h2>
-					<p className={classes.Desc}>
-						Making the web a better place, one expression at a time
-					</p>
-					<CTA click={() => console.log('Clicked')} />
+				<div className={classes.HeaderContainer}>
+					<div className={classes.HeaderContent}>
+						<h2 className={classes.Title}>Front End Developer</h2>
+						<p className={classes.Desc}>
+							Making the web a better place, one expression at a time
+						</p>
+						<CTA click={() => console.log('Clicked')} />
+					</div>
 				</div>
 			</main>
 		</Aux>
