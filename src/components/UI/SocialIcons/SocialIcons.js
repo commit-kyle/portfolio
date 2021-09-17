@@ -1,5 +1,7 @@
-import React from 'react';
-import Aux from '../../../Auxiliary/Auxiliary'
+import React, { useContext } from 'react';
+import Aux from '../../../Auxiliary/Auxiliary';
+
+import ThemeContext from '../../store/theme-context/theme-context';
 
 import LinkedIn from '../../../Assets/Images/SocialIcons/linkedin.png';
 import Twitter from '../../../Assets/Images/SocialIcons/twitter.png';
@@ -8,6 +10,12 @@ import Github from '../../../Assets/Images/SocialIcons/github.png';
 import Link from './SocialLink/SocialLink';
 
 const SocialIcons = props => {
+	const theme = useContext(ThemeContext);
+
+	const brandColorDark = "#6e5494";
+	const brandColorLight = "#211F1F";
+
+	
 	return (
 		<Aux>
 			<Link
@@ -27,7 +35,7 @@ const SocialIcons = props => {
 				socialBrand={'Twitter'}
 			/>
 			<Link
-				BrandColor={'#211F1F'}
+				BrandColor={ theme.isDarkModeActive ? brandColorDark : brandColorLight }
 				PosTop={'26.2rem'}
 				imgSrc={Github}
 				imgAlt={'Github account of Kyle Buttress'}

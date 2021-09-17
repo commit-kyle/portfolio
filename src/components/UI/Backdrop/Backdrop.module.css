@@ -5,7 +5,8 @@
 	top: 0;
 	left: 0;
 	z-index: 1300;
-	background-color: rgb(0, 0, 0, 0.85);
+	/* background-color: rgb(0, 0, 0, 0.85); */
+	background-color: rgba(73, 80, 87, 0.85);
 	display: flex;
 	justify-content: center;
 }

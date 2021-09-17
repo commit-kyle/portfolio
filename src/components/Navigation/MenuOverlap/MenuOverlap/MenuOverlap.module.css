@@ -11,6 +11,16 @@
 	}
 }
 
+.Dark {
+	background-color: #001219;
+	border: 2px solid #E0BB00;
+}
+
+.Light {
+	/* background: linear-gradient(to top, #a8dadc, #f1faee); */
+	background-color: #FFDA1F;
+}
+
 .ContainerPrimary {
 	position: fixed;
 	top: 0;
@@ -26,22 +36,21 @@
 .MenuContainer {
 	position: relative;
 	width: 20rem;
-	height: 30rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
 	padding: 3rem 5rem;
-	background-color: #ece9eb;
 	border-radius: 5px;
 	z-index: 3001;
+	transition: background-color 1s;
 }
 
 .itemsContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 3rem;
+	margin: 1.3rem 0  2rem;
 }
 
 .MenuIcon {

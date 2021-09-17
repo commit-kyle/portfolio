@@ -1,0 +1,17 @@
+.Dark {
+  background-color: transparent;
+  color: #FFDA1F;
+}
+
+.Light {
+  background-color: transparent;
+  color: #EF2E45;
+}
+
+.Btn {
+  border: none;
+  outline: none;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  transition: color 1s, color 0.5s;
+}

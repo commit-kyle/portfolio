@@ -33,6 +33,44 @@
 	}
 }
 
+.ProgressDark {
+	background-color: #e0bb00;
+}
+
+.ProgressLight {
+	background-color: #ef2e45;
+}
+
+.ProgressNumberDark {
+	background-color: #e0bb00;
+	color: #001219;
+}
+
+.ProgressNumberLight {
+	background-color: #ef2e45;
+	color: #e9ecef;
+}
+
+.HeaderDark {
+	color: #e9ecef;
+}
+
+.HeaderLight {
+	color: #ef2e45;
+}
+
+.SubHeaderDark {
+	color: #e0bb00;
+}
+
+.SubHeaderLight {
+	color: #219ebc;
+}
+
+.TextDark {
+	color: #e9ecef;
+}
+
 .Child {
 	width: 100%;
 	min-height: 100%;
@@ -48,7 +86,6 @@
 	width: 3px;
 	min-height: 100%;
 	max-height: 24rem;
-	background-color: #ba181b;
 }
 
 .ProgressNumber {
@@ -62,8 +99,6 @@
 	align-items: center;
 	padding: 0.2rem;
 	border-radius: 50%;
-	background-color: #ba181b;
-	color: white;
 	font-size: 14px;
 }
 
@@ -74,6 +109,7 @@
 	max-width: 20rem;
 	max-height: 40rem;
 	text-align: justify;
+	color: #14213d;
 }
 
 .Header {
@@ -81,16 +117,19 @@
 	font-size: 15px;
 	letter-spacing: 2.5px;
 	text-transform: uppercase;
+	transition: color 0.5s;
 }
 
 .SubHeader {
 	font-weight: 700;
 	font-size: 30px;
 	letter-spacing: -0.8px;
+	transition: color 0.5s;
 }
 
 .Text {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 1.5rem;
+	transition: color 0.5s;
 }

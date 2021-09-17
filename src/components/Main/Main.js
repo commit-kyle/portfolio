@@ -20,6 +20,7 @@ const Main = props => {
 					hideBackdrop={toggleMenu}
 					showMenu={toggleMenu}
 					sectionLink={toggleMenu}
+					onClick={props.onClick}
 				/>
 		  ))
 		: (menuOverlap = null);

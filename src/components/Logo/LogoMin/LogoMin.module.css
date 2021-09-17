@@ -10,6 +10,16 @@
 	}
 }
 
+.Dark {
+	stroke: #E0BB00;
+	animation: drawDark 1.5s linear alternate forwards;
+}
+
+.Light {
+	stroke: #EF2E45;
+	animation: drawLight 1.5s linear alternate forwards;
+}
+
 .Container {
 	width: 6rem;
 }
@@ -25,11 +35,10 @@ svg.SVG {
 	stroke-dashoffset: 250;
 	fill: transparent;
 	stroke-width: 0.5;
-	stroke: #ba181b;
-	animation: draw 1.5s linear alternate forwards;
+	transition: stroke 1s;
 }
 
-@keyframes draw {
+@keyframes drawLight {
 	0% {
 		stroke-dashoffset: 250;
 		stroke-width: 0.5;
@@ -42,6 +51,23 @@ svg.SVG {
 	}
 	100% {
 		stroke-dashoffset: 0;
-		fill: #ba181b;
+		fill: #EF2E45;
+	}
+}
+
+@keyframes drawDark {
+	0% {
+		stroke-dashoffset: 250;
+		stroke-width: 0.5;
+	}
+	80% {
+		stroke-width: 0.3;
+	}
+	90% {
+		fill: transparent;
+	}
+	100% {
+		stroke-dashoffset: 0;
+		fill: #E0BB00;
 	}
 }

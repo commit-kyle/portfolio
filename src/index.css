@@ -8,6 +8,7 @@
 
 body {
 	overflow: auto;
+	/* background: linear-gradient(to bottom, #a8dadc, #f1faee); */
 	font-family: 'Source Sans Pro', 'Ubuntu', sans-serif, -apple-system,
 		BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans',
 		'Droid Sans', 'Helvetica Neue';
