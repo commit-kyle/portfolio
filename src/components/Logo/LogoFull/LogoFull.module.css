@@ -15,10 +15,11 @@
 }
 
 .Light {
-	stroke: #EF2E45;
+	stroke: #219ebc;
 }
 
 .logoFull {
+	margin-top: 30px;
 	width: 30vw;
 	height: 13vh;
 }

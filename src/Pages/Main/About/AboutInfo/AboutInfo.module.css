@@ -109,12 +109,12 @@
 	max-width: 20rem;
 	max-height: 40rem;
 	text-align: justify;
-	color: #14213d;
+	color: #5E5B52;
 }
 
 .Header {
 	font-weight: 300;
-	font-size: 15px;
+	font-size: 20px;
 	letter-spacing: 2.5px;
 	text-transform: uppercase;
 	transition: color 0.5s;
@@ -128,8 +128,8 @@
 }
 
 .Text {
-	font-weight: 400;
-	font-size: 20px;
+	font-weight: 300;
+	font-size: 18px;
 	line-height: 1.5rem;
 	transition: color 0.5s;
 }

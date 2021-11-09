@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import ThemeContext from '../../../store/theme-context/theme-context';
+import ThemeContext from '../../../../components/store/theme-context/theme-context';
 
 import classes from './AboutInfo.module.css';
 

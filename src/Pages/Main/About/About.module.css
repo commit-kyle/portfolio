@@ -104,8 +104,17 @@
 
 .AboutContainer {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
+}
+
+.Title {
+	display: flex;
+}
+
+.iconAddressBook {
+	margin-left: 1rem;
+	color: #EF2E45;
 }
 
 .HeaderContainer {

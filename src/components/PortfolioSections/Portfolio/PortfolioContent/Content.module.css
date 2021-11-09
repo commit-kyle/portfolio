@@ -1,0 +1,96 @@
+@media screen and (max-width: 480px) {
+  .PortfolioContainer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 992px) {
+
+}
+
+.PortfolioContainer {
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+}
+
+.Light {
+	transition: color 0.5s;
+}
+
+.Light h1 {
+	color: #219ebc;
+}
+
+.Light h2 {
+	color: #ef2e45;
+}
+
+.Light p {
+	color: #5e5b52;
+}
+
+.Dark h1 {
+	color: #e0bb00;
+}
+
+.Dark h2 {
+	color: #ef2e45;
+}
+
+.Dark p {
+	color: #f5f5f5;
+}
+
+.Content {
+	max-width: 30rem;
+}
+
+.Content h2 {
+	font-weight: 300;
+	font-size: 20px;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	margin-bottom: 0.7rem;
+}
+
+.Content p {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 1.5rem;
+}
+
+.Title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.Title h1 {
+	font-size: 3rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	transition: color 0.5s;
+}
+
+.iconBrief {
+	margin-left: 1rem;
+	color: #ef2e45;
+}
+
+.Split {
+	width: 8px;
+  height: 450px;
+  margin: 0 3rem;
+}
+
+.SplitLight {
+  background-image: linear-gradient(to bottom, #ef2e45, #ef2e45 50%, #219ebc 50%);
+  
+}
+
+.SplitDark {
+  background-image: linear-gradient(to bottom, #ef2e45, #ef2e45 50%, #e0bb00 50%);
+  
+}

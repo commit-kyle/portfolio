@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 import ThemeContext from '../../store/theme-context/theme-context';
 
@@ -15,16 +16,12 @@ const NavItem = props => {
 
 		// ItemBorderClasses = [classes.ItemBorder, classes.ItemBorderDark]
 	}
-	
+
 	return (
-		<li className={classes.ListItem}>
-			<a
-				className={ItemLinkClasses.join(' ')}
-				href={props.link}
-				onClick={props.sectionLink}
-			>
+		<li className={classes.ListItem} onClick={props.navItemClick}>
+			<HashLink to={props.link} smooth className={ItemLinkClasses.join(' ')}>
 				{props.name}
-			</a>
+			</HashLink>
 			{/* <span className={ItemBorderClasses.join(' ')}></span> */}
 		</li>
 	);

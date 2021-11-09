@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useMemo } from 'react';
 
 import ThemeContext from '../../../store/theme-context/theme-context';
 
@@ -12,18 +12,19 @@ const ThemeBtn = props => {
 	const theme = useContext(ThemeContext);
 
 	const [mode, setMode] = useState(false);
-	const dark = <FontAwesomeIcon icon={faMoon} size="2x" />
-	const light = <FontAwesomeIcon icon={faSun} size="2x" spin />
+
+	const iconDark = useMemo(() => <FontAwesomeIcon icon={faMoon} size="2x" />, []);
+	const iconLight = useMemo(() => <FontAwesomeIcon icon={faSun} size="2x" spin />, [])
 
 	let BtnClasses = [classes.Btn, classes.Light];
 
 	useEffect(() => {
 		if (theme.isDarkModeActive) {
-			setMode(light);
+			setMode(iconLight);
 		} else {
-			setMode(dark);
+			setMode(iconDark);
 		}
-	}, [theme.isDarkModeActive]);
+	}, [theme.isDarkModeActive, iconDark, iconLight]);
 
   if (theme.isDarkModeActive) {
     BtnClasses = [classes.Btn, classes.Dark];

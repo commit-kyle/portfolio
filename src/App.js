@@ -1,30 +1,63 @@
-import React, { useContext } from 'react';
-
+import React, { useState } from 'react';
+import { Switch, Route, Redirect } from 'react-router';
 import ThemeContext from './components/store/theme-context/theme-context';
 
-import classes from './App.module.css';
-
-import Main from './components/Main/Main';
-import About from './components/PortfolioSections/About/About';
+import MenuOverlap from './components/Navigation/MenuOverlap/MenuOverlap/MenuOverlap';
 import SocialIcons from './components/UI/SocialIcons/SocialIcons';
+import Main from './Pages/Main/Main';
+import Projects from './Pages/Projects/Projects';
+import Navigation from './components/Navigation/Navigation';
 
-const App = props => {
-	const theme = useContext(ThemeContext);
+// import classes from './App.module.css';
+// import Portfolio from './Pages/Main/Portfolio/Portfolio';
 
-	let parentClasses = [classes.Parent, classes.Light];
+const App = () => {
+	// THEME LOGIC //
+	const [isDarkModeActive, setIsDarkModeActive] = useState(false);
 
-	if (theme.isDarkModeActive) {
-		parentClasses = [classes.Parent, classes.Dark]
-	}
+	const changeTheme = () => {
+		setIsDarkModeActive(!isDarkModeActive);
+	};
+
+	// MENU TOGGLE LOGIC //
+	const [active, setActive] = useState(false);
+
+	const toggleMenu = () => {
+		setActive(!active);
+	};
+
+	let menuOverlap = null;
+	active
+		? (menuOverlap = (
+				<MenuOverlap
+					menuActive={active}
+					hideBackdrop={toggleMenu}
+					showMenu={toggleMenu}
+					sectionLink={toggleMenu}
+					onClick={changeTheme}
+					navItemClick={toggleMenu}
+				/>
+		  ))
+		: (menuOverlap = null);
 
 	return (
-		<React.Fragment>
-			<div className={parentClasses.join(' ')}>
-				<Main onClick={props.onClick} />
-				<About />
-			</div>
+		<ThemeContext.Provider value={{ isDarkModeActive: isDarkModeActive }}>
+			<Navigation showMenu={toggleMenu} menuActive={active} />
+
 			<SocialIcons />
-		</React.Fragment>
+			{menuOverlap}
+			<Switch>
+				<Route path="/" exact>
+					<Redirect to="/home" />
+				</Route>
+				<Route path="/home">
+					<Main showMenu={toggleMenu} menuActive={active} />
+				</Route>
+				<Route path="/projects">
+					<Projects showMenu={toggleMenu} menuActive={active} />
+				</Route>
+			</Switch>
+		</ThemeContext.Provider>
 	);
 };
 

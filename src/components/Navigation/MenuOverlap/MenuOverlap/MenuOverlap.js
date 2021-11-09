@@ -16,7 +16,7 @@ const MenuOverlap = props => {
 	let MenuClasses = [classes.MenuContainer, classes.Light];
 
 	if (theme.isDarkModeActive) {
-		MenuClasses = [classes.MenuContainer, classes.Dark]
+		MenuClasses = [classes.MenuContainer, classes.Dark];
 	}
 
 	return (
@@ -30,21 +30,22 @@ const MenuOverlap = props => {
 				<ThemeBtn onClick={props.onClick} />
 				<div className={classes.itemsContainer}>
 					<NavItem
-						link={'#About'}
+						navItemClick={props.navItemClick}
+						link={'/home#about'}
 						name={'About'}
-						sectionLink={props.sectionLink}
 					/>
 					<NavItem
-						link={'#'}
+						navItemClick={props.navItemClick}
+						link={'/home#portfolio'}
 						name={'Portfolio'}
-						sectionLink={props.sectionLink}
 					/>
 					<NavItem
-						link={'#'}
+						navItemClick={props.navItemClick}
+						link={'/home#contact'}
 						name={'Contact'}
-						sectionLink={props.sectionLink}
 					/>
 				</div>
+
 				<div className={classes.MenuIcon}>
 					<Hamburger menuActive={props.menuActive} showMenu={props.showMenu} />
 				</div>

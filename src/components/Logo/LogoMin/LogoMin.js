@@ -1,21 +1,20 @@
 import React, { useContext } from 'react';
-
+import { HashLink } from 'react-router-hash-link';
 import ThemeContext from '../../store/theme-context/theme-context';
 
 import classes from './LogoMin.module.css';
 
 const LogoMin = props => {
-
 	const theme = useContext(ThemeContext);
 
 	let pathClasses = [classes.Path, classes.Light];
 
 	if (theme.isDarkModeActive) {
-		pathClasses = [classes.Path, classes.Dark]
+		pathClasses = [classes.Path, classes.Dark];
 	}
 	return (
 		<div className={classes.Container}>
-			<a href="#Home" onClick={props.sectionLink}>
+			<HashLink to="/home#home" smooth onClick={props.sectionLink}>
 				<svg
 					className={classes.SVG}
 					xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +29,7 @@ const LogoMin = props => {
 						d="M29.5,49.8a1.35,1.35,0,0,0,.32-.15l.23-.12a2,2,0,0,0,.28-.19.76.76,0,0,0,.11-.08c.17-.13.17-.16.29-.26a4,4,0,0,0,.41-.51l.12-.18a3.93,3.93,0,0,0,.2-.43,2.57,2.57,0,0,0,.21-.9V45.49h0a1.93,1.93,0,0,0,0-.34v-.38c0-.06,0-.7,0-.76v-.19h0a1.08,1.08,0,0,0,0-.18h.09l3.19.06a8.9,8.9,0,0,0,0-17.79,3.37,3.37,0,0,1-3.22-3.24A3.26,3.26,0,0,1,35,19.55a5.83,5.83,0,0,0,5.55-3.08c2.6-5.24-.94-10.12-5.63-10.12H28.72a.6.6,0,0,0,.08-.08l.11-.13L29.07,6c.05,0,.21-.19.25-.24s.22-.2.25-.25a2.38,2.38,0,0,0,.26-.31l.08-.11S30,5,30,4.92a1.11,1.11,0,0,0,.14-.26s.09-.28.11-.33.05-.24.07-.3,0-.26,0-.3a2.18,2.18,0,0,0,0-.28V3.2c0-.13,0-.26,0-.33a3,3,0,0,0-.11-.46S30.06,2,30.06,2c-.07-.17-.13-.22-.16-.33l-.06-.11a1.07,1.07,0,0,0-.19-.28l0,0-.08-.1A.69.69,0,0,0,29.43,1a3.62,3.62,0,0,0-1.8-1h-.07V0h7.33A12.78,12.78,0,0,1,47.6,12.91a12,12,0,0,1-3.89,9.36.08.08,0,0,0,0,.12A15.27,15.27,0,0,1,35,50l-6.31,0,.51-.08"
 					/>
 				</svg>
-			</a>
+			</HashLink>
 		</div>
 	);
 };

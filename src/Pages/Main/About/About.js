@@ -1,18 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
+import ThemeContext from '../../../components/store/theme-context/theme-context';
 
-import ThemeContext from '../../store/theme-context/theme-context';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import Info from './AboutInfo/AboutInfo';
+import AboutImage from './AboutImage/AboutImage';
 
 import classes from './About.module.css';
 
-import Info from '../About/AboutInfo/AboutInfo';
-import AboutImage from './AboutImage/AboutImage';
-
-const About = props => {
+const About = () => {
 	const aboutData = {
 		first: {
 			header: 'Where it all started',
 			subHeader: 'The trick is growing up without growing old',
-			text: "Born and raised in the city of Cape Town, South Africa. I ",
+			text: 'Born and raised in the city of Cape Town, South Africa. I ',
 		},
 
 		second: {
@@ -30,6 +31,11 @@ const About = props => {
 		},
 	};
 
+	const iconAbout = useMemo(
+		() => <FontAwesomeIcon icon={faAddressBook} size="2x" className={classes.iconAddressBook} />,
+		[]
+	);
+
 	const theme = useContext(ThemeContext);
 
 	let parentClasses = [classes.Parent, classes.ParentLight];
@@ -41,10 +47,13 @@ const About = props => {
 	}
 
 	return (
-		<section id="About" className={classes.Child}>
+		<section id="about" className={classes.Child}>
 			<div className={classes.AboutContainer}>
 				<div className={classes.HeaderContainer}>
-					<h2 className={headingClasses.join(' ')}>A little about me</h2>
+					<div className={classes.Title}>
+						<h2 className={headingClasses.join(' ')}>A little about me</h2>
+						{iconAbout}
+					</div>
 					<AboutImage />
 				</div>
 				<div className={classes.InfoContainer}>

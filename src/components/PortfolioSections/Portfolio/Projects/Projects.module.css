@@ -1,0 +1,9 @@
+div.Container {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+	justify-content: center;
+	background-color: #ffb4a2;
+	max-width: 100vw;
+	min-height: 100vh;
+}

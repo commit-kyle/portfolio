@@ -4,8 +4,8 @@ import ThemeContext from '../../store/theme-context/theme-context';
 
 import classes from './LogoFull.module.css';
 
-const LogoFull = props => {
-	const theme = useContext (ThemeContext);
+const LogoFull = () => {
+	const theme = useContext(ThemeContext);
 
 	let pathClasses = [classes.path, classes.Light];
 
@@ -14,15 +14,17 @@ const LogoFull = props => {
 	}
 
 	return (
-		<svg className={classes.logoFull} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 65">
+		<svg
+			className={classes.logoFull}
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 325 65"
+		>
 			<path
 				className={pathClasses.join(' ')}
-				
 				d="M6,27.5V44.87a3,3,0,0,1-2,2.88,3.09,3.09,0,0,1-4-2.9V3.32a3.14,3.14,0,0,1,2.16-3A3,3,0,0,1,6,3.23v15.7L24.44,1h-.07A2.57,2.57,0,0,1,26.49.14,3.19,3.19,0,0,1,28.9,5.39Zm25,3.76v13.9a3.13,3.13,0,0,1-3,3,3,3,0,0,1-3-3V31.26a5.83,5.83,0,0,0-2.21-5,5.5,5.5,0,0,0-4-1.3H13.64l6-6a12.85,12.85,0,0,1,6.65,2.31A12.23,12.23,0,0,1,31,31.26Z"
 			/>
 			<path
 				className={pathClasses.join(' ')}
-				
 				d="M48.24,40.35,38,62.31A3.27,3.27,0,0,1,35.35,64c-3.1,0-3.67-2.88-2.52-4.69l8.93-19.08L31.53,20.83l.08.07a2.87,2.87,0,0,1,.72-4A3.1,3.1,0,0,1,36.65,18Zm9.22-19.81-7.92,17-3.39-6.7L52.06,18a3,3,0,0,1,2.8-1.65C57.67,16.3,58.25,18.74,57.46,20.54Z"
 			/>
 			<path

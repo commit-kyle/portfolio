@@ -34,13 +34,13 @@
 	}
 }
 
-.Nav {
+.Nav { 
+	position: absolute;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-width: 100vw;
 	height: 150px;
-	/* background-color: #14213d; */
 }
 
 .LogoMin {

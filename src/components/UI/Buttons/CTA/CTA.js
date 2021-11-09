@@ -16,7 +16,7 @@ const CTA = props => {
 
 	return (
 		<button onClick={props.click} className={CTAClasses.join(' ')}>
-			Get in touch
+			{props.children}
 		</button>
 	);
 };
