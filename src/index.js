@@ -8,7 +8,7 @@ import './index.css';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<BrowserRouter basename="/">
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<App />
 		</BrowserRouter>
 	</React.StrictMode>,
