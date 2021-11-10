@@ -43,7 +43,7 @@ const App = () => {
 			<SocialIcons />
 			{menuOverlap}
 			<Switch>
-				<Route path="/" exact>
+				<Route path="/portfolio" exact>
 					<Redirect to="/home" />
 				</Route>
 				<Route path="/home">
