@@ -8,9 +8,6 @@ import Main from './Pages/Main/Main';
 import Projects from './Pages/Projects/Projects';
 import Navigation from './components/Navigation/Navigation';
 
-// import classes from './App.module.css';
-// import Portfolio from './Pages/Main/Portfolio/Portfolio';
-
 const App = () => {
 	// THEME LOGIC //
 	const [isDarkModeActive, setIsDarkModeActive] = useState(false);
@@ -43,7 +40,6 @@ const App = () => {
 	return (
 		<ThemeContext.Provider value={{ isDarkModeActive: isDarkModeActive }}>
 			<Navigation showMenu={toggleMenu} menuActive={active} />
-
 			<SocialIcons />
 			{menuOverlap}
 			<Switch>
