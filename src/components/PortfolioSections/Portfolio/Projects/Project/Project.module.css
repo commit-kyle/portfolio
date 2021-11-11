@@ -1,9 +1,11 @@
 .Container {
-	width: 40rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 30rem;
+	height: 15rem;
 	margin: 1rem;
-	padding: 2rem;
 	border-radius: 15px;
-	transition: box-shadow 0.5s;
 }
 
 .FirstContent {
@@ -11,10 +13,12 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: 80%;
 	padding: 2rem;
+	border: 2px solid #fff;
 	border-radius: 10px;
 	background: #ffb4a2;
-	box-shadow: -7px 7px 14px #b07c70, 7px -7px 14px #ffc2a1;
+	transition: box-shadow 0.5s;
 }
 
 .Container h1 {
@@ -33,14 +37,35 @@
 }
 
 .Link p {
-	font-family: 'Source Sans Pro', 'Ubuntu', sans-serif;
+	font-family: inherit;
 	font-weight: 400;
 	font-size: 15px;
+	color: #fff;
 }
 
 .iconLink {
 	color: #fff;
 }
 
-.Container:hover {
+.Info {
+	position: absolute;
+	opacity: 0;
+	right: 50px;
+	height: fit-content;
+	margin: 1rem;
+	padding: 5px 10px;
+	border-radius: 25%;
+	transition: all 0.7s;
+}
+
+.FirstContent:hover {
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.2),
+		0 8px 8px rgba(0, 0, 0, 0.2), 0 16px 16px rgba(0, 0, 0, 0.2),
+		0 32px 32px rgba(0, 0, 0, 0.2);
+}
+
+.Container:hover > .Info {
+	right: 0;
+	opacity: 1;
+	background-color: lightblue;
 }
