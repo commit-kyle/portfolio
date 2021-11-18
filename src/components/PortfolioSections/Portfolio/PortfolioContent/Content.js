@@ -10,24 +10,26 @@ import classes from './Content.module.css';
 const Content = () => {
 	const theme = useContext(ThemeContext);
 
+	let contentClasses = [classes.Content, classes.Light];
+	let splitClasses = [classes.Split, classes.SplitLight];
+	let iconClasses = [classes.iconBrief, classes.iconBriefLight];
+
+	if (theme.isDarkModeActive) {
+		contentClasses = [classes.Content, classes.Dark];
+		splitClasses = [classes.Split, classes.SplitDark];
+		iconClasses = [classes.iconBrief, classes.iconBriefDark];
+	}
+
 	const iconBrief = useMemo(
 		() => (
 			<FontAwesomeIcon
 				icon={faBriefcase}
 				size="2x"
-				className={classes.iconBrief}
+				className={iconClasses.join(' ')}
 			/>
 		),
-		[]
+		[iconClasses]
 	);
-
-	let contentClasses = [classes.Content, classes.Light];
-	let splitClasses = [classes.Split, classes.SplitLight];
-
-	if (theme.isDarkModeActive) {
-		contentClasses = [classes.Content, classes.Dark];
-		splitClasses = [classes.Split, classes.SplitDark];
-	}
 
 	return (
 		<div className={classes.PortfolioContainer}>
