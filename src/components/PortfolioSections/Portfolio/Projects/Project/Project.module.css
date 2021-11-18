@@ -70,6 +70,8 @@
 }
 
 .Title h1 {
+	font-family: 'Source Sans Pro', 'Ubuntu', sans-serif;
+	font-weight: 300;
 	align-self: flex-end;
 }
 
