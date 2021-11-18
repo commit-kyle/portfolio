@@ -10,7 +10,7 @@ const Header = () => {
 	const theme = useContext(ThemeContext);
 
 	let headerClasses = [classes.HeaderContent, classes.Light];
-	let titleClasses = [classes.Title];
+	let titleClasses = [classes.Title, classes.TitleLight];
 
 	if (theme.isDarkModeActive) {
 		headerClasses = [classes.HeaderContent, classes.Dark];
