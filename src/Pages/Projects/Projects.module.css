@@ -1,8 +1,15 @@
 .Container {
-  display: flex;
-  justify-content: center;
-  background-color: #F5F5F5;
-  height:fit-content;
-  padding:7rem 0;
-  overflow-x: hidden;
+	display: flex;
+	justify-content: center;
+	height: fit-content;
+	padding: 7rem 0;
+	overflow-x: hidden;
+}
+
+.Light {
+	background-color: #0a9396;
+}
+
+.Dark {
+  background-color: #001219;
 }

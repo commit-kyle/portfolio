@@ -4,12 +4,15 @@
 		text-align: center;
 		letter-spacing: 3px;
 		margin-bottom: 2rem;
+		padding-top: 50%;
 	}
+
 	
 	p.Desc {
 		font-size: 1.2rem;
 		text-align: center;
 		margin: 0 20px 3rem;
+		padding: 10% 0 20%;
 	}
 }
 
@@ -19,12 +22,14 @@
 		text-align: center;
 		letter-spacing: 4px;
 		margin-bottom: 3rem;
+		padding-top: 30%;
 	}
 	
 	p.Desc {
 		font-size: 1.6rem;
 		text-align: center;
 		margin: 0 20px 3rem;
+		padding: 10% 0 20%;
 	}
 }
 
@@ -34,11 +39,15 @@
 }
 
 .Light {
-	color: #219ebc;
+	color: #fdf0d5;
 }
 
 .TitleDark {
 	color: #E0BB00;
+}
+
+.TitleLight {
+	color: #ff8500;
 }
 
 .Container {

@@ -1,3 +1,9 @@
+@media screen and (max-width: 480px) {
+	.Child {
+		flex-direction: column;
+	}	
+}
+
 .Child {
 	max-width: 100vw;
 	min-height: 100vh;

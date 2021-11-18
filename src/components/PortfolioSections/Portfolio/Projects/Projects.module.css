@@ -1,9 +1,13 @@
+@media screen and (max-width: 480px) {
+	.Container {
+		padding: 1rem;
+	}
+}
+
 .Container {
+	max-width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 70vw;
 	height: 100%;
-	padding: 1rem;
-	background-color: rgb(240, 93, 93);
 }

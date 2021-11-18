@@ -66,12 +66,14 @@
 		padding-top: 70px;
 		margin-top: 150px;
 		scroll-snap-align: start;
+		scroll-snap-type: none;
 	}
 
 	div.Parent {
 		max-width: 80vw;
 		max-height: 70vh;
 		scroll-snap-align: start;
+		scroll-snap-type: none;
 	}
 }
 
@@ -80,11 +82,11 @@
 }
 
 .ParentLight {
-	scrollbar-color: #EF2E45 #219EBC;
+	scrollbar-color: #5a189a #fdf0d5;
 }
 
 .HeadingLight {
-	color: #219EBC;
+	color: #fdf0d5;
 	transition: color 0.5s;
 }
 
@@ -112,8 +114,15 @@
 	display: flex;
 }
 
-.iconAddressBook {
+.Icon {
 	margin-left: 1rem;
+}
+
+.IconLight {
+	color: #ff8500;
+}
+
+.IconDark {
 	color: #EF2E45;
 }
 
@@ -161,15 +170,15 @@
 
 /* Track */
 .Parent::-webkit-scrollbar-track {
-	background: #ccc;
+	background-color: #fdf0d5;
 }
 
 /* Handle */
 .Parent::-webkit-scrollbar-thumb {
-	background: #EF2E45;
+	background: #5a189a;
 }
 
 /* Handle on hover */
 .Parent::-webkit-scrollbar-thumb:hover {
-	background: #EF2E45;
+	background: #3c0177;
 }

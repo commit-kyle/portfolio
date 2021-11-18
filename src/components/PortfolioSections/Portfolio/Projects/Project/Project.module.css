@@ -1,71 +1,82 @@
+@media screen and (max-width: 480px) {
+	.Container {
+		height: 18rem;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.Content {
+		justify-content: center;
+		max-width: 50%;
+	}
+
+	.Links {
+		margin-top: -3rem;
+		min-height: 70%;
+	}
+
+	.Title {
+		height: 50%;
+	}
+}
+
 .Container {
-	position: relative;
 	display: flex;
-	justify-content: center;
-	width: 30rem;
-	height: 15rem;
-	margin: 1rem;
+	width: 50rem;
+	margin: 3rem 0;
+}
+
+.Content {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.ImgContainer {
+	overflow: hidden;
+	width: 90%;
 	border-radius: 15px;
 }
 
-.FirstContent {
+.ImgContainerLight {
+	border-right: 3px solid #ff8500;
+	border-bottom: 3px solid #ff8500;
+}
+
+.ImgContainerDark {
+	border-right: 3px solid #e0bb00;
+	border-bottom: 3px solid #e0bb00;
+}
+
+.Img {
+	width: 100%;
+	height: 100%;
+}
+
+.Links {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	width: 80%;
-	padding: 2rem;
-	border: 2px solid #fff;
-	border-radius: 10px;
-	background: #ffb4a2;
-	transition: box-shadow 0.5s;
+	justify-content: space-evenly;
+	width: 50%;
 }
 
-.Container h1 {
-	font-size: 1.5rem;
-	font-weight: 400;
-	letter-spacing: 3px;
-	color: #14213d;
-	text-align: center;
-	margin-bottom: 1.5rem;
-}
-
-.Link {
+.Title {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	width: 100%;
+	transition: all 0.3s;
 }
 
-.Link p {
-	font-family: inherit;
-	font-weight: 400;
-	font-size: 15px;
-	color: #fff;
+.Title h1 {
+	align-self: flex-end;
 }
 
-.iconLink {
-	color: #fff;
+.TitleLight {
+	color: #fdf0d5;
 }
 
-.Info {
-	position: absolute;
-	opacity: 0;
-	right: 50px;
-	height: fit-content;
-	margin: 1rem;
-	padding: 5px 10px;
-	border-radius: 25%;
-	transition: all 0.7s;
-}
-
-.FirstContent:hover {
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.2),
-		0 8px 8px rgba(0, 0, 0, 0.2), 0 16px 16px rgba(0, 0, 0, 0.2),
-		0 32px 32px rgba(0, 0, 0, 0.2);
-}
-
-.Container:hover > .Info {
-	right: 0;
-	opacity: 1;
-	background-color: lightblue;
+.TitleDark {
+	color: #e0bb00;
 }

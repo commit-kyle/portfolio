@@ -16,7 +16,8 @@
 }
 
 .Light {
-	stroke: #219ebc;
+	stroke: #5a189a;
+	/* stroke: #219ebc; */
 	animation: drawLight 1.5s linear alternate forwards;
 }
 
@@ -25,7 +26,6 @@
 }
 
 svg.SVG {
-	z-index: 9999 !important;
 	max-width: 6rem;
 	height: auto;
 }
@@ -51,7 +51,8 @@ svg.SVG {
 	}
 	100% {
 		stroke-dashoffset: 0;
-		fill: #219ebc;
+		fill: #5a189a;
+		/* fill: #219ebc; */
 	}
 }
 
