@@ -31,20 +31,22 @@ const About = () => {
 		},
 	};
 
-	const iconAbout = useMemo(
-		() => <FontAwesomeIcon icon={faAddressBook} size="2x" className={classes.iconAddressBook} />,
-		[]
-	);
-
 	const theme = useContext(ThemeContext);
 
 	let parentClasses = [classes.Parent, classes.ParentLight];
 	let headingClasses = [classes.Heading, classes.HeadingLight];
+	let iconClasses = [classes.Icon, classes.IconLight]
 
 	if (theme.isDarkModeActive) {
 		parentClasses = [classes.Parent, classes.ParentDark];
 		headingClasses = [classes.Heading, classes.HeadingDark];
+		iconClasses = [classes.Icon, classes.IconDark];
 	}
+
+	const iconAbout = useMemo(
+		() => <FontAwesomeIcon icon={faAddressBook} size="2x" className={iconClasses.join(' ')} />,
+		[iconClasses]
+	);
 
 	return (
 		<section id="about" className={classes.Child}>

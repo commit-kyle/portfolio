@@ -11,7 +11,7 @@ const Info = props => {
 	let proNumClasses = [classes.ProgressNumber, classes.ProgressNumberLight];
 	let headerClasses = [classes.Header, classes.HeaderLight];
 	let subHeadClasses = [classes.SubHeader, classes.SubHeaderLight];
-	let textClasses = [classes.Text];
+	let textClasses = [classes.Text, classes.TextLight];
 
 	if (theme.isDarkModeActive) {
 		proClasses = [classes.Progress, classes.ProgressDark];
