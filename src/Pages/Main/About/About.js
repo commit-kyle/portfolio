@@ -5,43 +5,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import Info from './AboutInfo/AboutInfo';
 import AboutImage from './AboutImage/AboutImage';
+import aboutData from '../../../Assets/DataStore/About/aboutData.json';
 
 import classes from './About.module.css';
 
 const About = () => {
-	const aboutData = {
-		first: {
-			header: 'Where it all started',
-			subHeader: 'The trick is growing up without growing old',
-			text: 'Born and raised in the city of Cape Town, South Africa. I ',
-		},
-
-		second: {
-			header: 'work hard',
-			subHeader:
-				"To work hard means to push yourself further and that's what you need to swim across the atlantic",
-			text: "I've been working hard all my life and I've even been doing so in school and when I come across a sucker I lick it so that it doesn't drip into the land of the thirsty and I don't know what I'm writing but I hope it all makes sense to the dogs who lie in the lounge when they dream about donkeys",
-		},
-
-		third: {
-			header: 'work hard',
-			subHeader:
-				"To work hard means to push yourself further and that's what you need to swim across the atlantic",
-			text: "I've been working hard all my life and I've even been doing so in school and when I come across a sucker I lick it so that it doesn't drip into the land of the thirsty and I don't know what I'm writing but I hope it all makes sense to the dogs who lie in the lounge when they dream about donkeys",
-		},
-	};
 
 	const theme = useContext(ThemeContext);
 
-	let parentClasses = [classes.Parent, classes.ParentLight];
-	let headingClasses = [classes.Heading, classes.HeadingLight];
-	let iconClasses = [classes.Icon, classes.IconLight]
+	const parentClasses = useMemo(() => {
+		return theme.isDarkModeActive
+		? [classes.Parent, classes.ParentDark]
+		: [classes.Parent, classes.ParentLight];
+	}, [theme.isDarkModeActive]);
 
-	if (theme.isDarkModeActive) {
-		parentClasses = [classes.Parent, classes.ParentDark];
-		headingClasses = [classes.Heading, classes.HeadingDark];
-		iconClasses = [classes.Icon, classes.IconDark];
-	}
+	const headingClasses = useMemo(() => {
+		return theme.isDarkModeActive
+		? [classes.Heading, classes.HeadingDark]
+		: [classes.Heading, classes.HeadingLight];
+	}, [theme.isDarkModeActive]);
+
+	const iconClasses = useMemo(() => {
+		return theme.isDarkModeActive
+		? [classes.Icon, classes.IconDark]
+		: [classes.Icon, classes.IconLight];
+	}, [theme.isDarkModeActive]);
 
 	const iconAbout = useMemo(
 		() => <FontAwesomeIcon icon={faAddressBook} size="2x" className={iconClasses.join(' ')} />,
@@ -61,22 +49,22 @@ const About = () => {
 				<div className={classes.InfoContainer}>
 					<div className={parentClasses.join(' ')}>
 						<Info
-							number={'1'}
+							number={aboutData.first.id}
 							header={aboutData.first.header}
 							subHeader={aboutData.first.subHeader}
 							text={aboutData.first.text}
 						/>
 						<Info
-							number={'2'}
-							header={aboutData.first.header}
-							subHeader={aboutData.first.subHeader}
-							text={aboutData.first.text}
+							number={aboutData.second.id}
+							header={aboutData.second.header}
+							subHeader={aboutData.second.subHeader}
+							text={aboutData.second.text}
 						/>
 						<Info
-							number={'3'}
-							header={aboutData.first.header}
-							subHeader={aboutData.first.subHeader}
-							text={aboutData.first.text}
+							number={aboutData.third.id}
+							header={aboutData.third.header}
+							subHeader={aboutData.third.subHeader}
+							text={aboutData.third.text}
 						/>
 					</div>
 				</div>
