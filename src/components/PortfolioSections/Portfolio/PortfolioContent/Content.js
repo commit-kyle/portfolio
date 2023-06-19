@@ -10,25 +10,33 @@ import classes from './Content.module.css';
 const Content = () => {
 	const theme = useContext(ThemeContext);
 
-	let contentClasses = [classes.Content, classes.Light];
-	let splitClasses = [classes.Split, classes.SplitLight];
-	let iconClasses = [classes.iconBrief, classes.iconBriefLight];
+	const contentClasses = useMemo(() => {
+	return theme.isDarkModeActive
+		? [classes.Content, classes.Dark]
+		: [classes.Content, classes.Light];
+	}, [theme.isDarkModeActive]);
 
-	if (theme.isDarkModeActive) {
-		contentClasses = [classes.Content, classes.Dark];
-		splitClasses = [classes.Split, classes.SplitDark];
-		iconClasses = [classes.iconBrief, classes.iconBriefDark];
-	}
+	const splitClasses = useMemo(() => {
+	return theme.isDarkModeActive
+		? [classes.Split, classes.SplitDark]
+		: [classes.Split, classes.SplitLight];
+	}, [theme.isDarkModeActive]);
+
+	const iconClasses = useMemo(() => {
+	return theme.isDarkModeActive
+		? [classes.iconBrief, classes.iconBriefDark]
+		: [classes.iconBrief, classes.iconBriefLight];
+	}, [theme.isDarkModeActive]);
 
 	const iconBrief = useMemo(
-		() => (
-			<FontAwesomeIcon
-				icon={faBriefcase}
-				size="2x"
-				className={iconClasses.join(' ')}
-			/>
-		),
-		[iconClasses]
+	() => (
+		<FontAwesomeIcon
+		icon={faBriefcase}
+		size="2x"
+		className={iconClasses.join(' ')}
+		/>
+	),
+	[iconClasses]
 	);
 
 	return (
