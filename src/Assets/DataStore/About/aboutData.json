@@ -1,0 +1,21 @@
+{
+    "first": {
+      "id": "1",
+      "header": "Where it all started",
+      "subHeader": "The trick is, growing up without growing old",
+      "text": "My journey in software development began with a spark of curiosity and a desire to create. I embarked on a path of continuous learning and exploration."
+    },
+    "second": {
+      "id": "2",
+      "header": "My Skills and Expertise",
+      "subHeader": "Learning never exhausts the mind",
+      "text": "I have acquired a diverse set of skills. I'm proficient in front-end technologies such as HTML, CSS, and JavaScript having utilized the React & Angular Frameworks as well as TypeScript. For backend development, I have worked with technologies such as Java, Spring and Hibernate. Other technologies & tools include, Git, GitHub & GitLab, Jira & Confluence, RESTful APIs"
+    },
+    "third": {
+      "id": "3",
+      "header": "Passion for Software Development",
+      "subHeader": "The future of the web is in your hands",
+      "text": "Software development is not just a profession for me; it's my passion. I am captivated by the dynamic nature of the web and the endless possibilities it offers. Software development isn't just about writing code; it's about creating meaningful experiences that make a difference."
+    }
+  }
+  
